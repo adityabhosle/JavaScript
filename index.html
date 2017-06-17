@@ -4,8 +4,25 @@
    <meta charset="UTF-8">
    <title>Getting Started with JavaScript</title>
    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <style>
+   		body
+   		{
+           padding : 30px;
+   		}
+   	
+   </style>
 </head>
 <body>
-	hello!
+	<div class="jumbotron text-center">
+	<h1>This is my site! </h1>
+	<button type="button" class="btn btn-primary" onclick="ChangeText()"> Change the Text </button>
+	</div>
+	<script>
+	const header = document.querySelector('h1'); 
+
+	function ChangeText(){
+	header.innerText='my new text!';	
+    }
+	</script>
 </body>
 </html>
