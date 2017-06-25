@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <title>Getting Started with JavaScript</title>
-   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <style>
    		body
    		{
@@ -13,10 +13,31 @@
    </style>
 </head>
 <body>
-	
-	<script>
-	
 
+</body>
+	<script>
+	const hero={
+		name:'bruce wayne',
+		alias:'Batman',
+		catchphrase:'To the batcave!',
+		speak: function()
+		{
+			return 'Attention!' + this.catchphrase;
+		},
+		attack:function(sound)
+		{
+			return `(punches bad guy) ${sound}`;
+		}
+	};
+
+
+	const thingLookingFor='alias';
+	console.log(hero.name);
+	console.log(hero['name']);
+	console.log(hero[thingLookingFor]);
+
+	console.log(hero.speak());
+	console.log(hero.attack('POWWWWWW'));
 	</script>
 </body>
 </html>
