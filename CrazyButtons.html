@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Getting Started with JavaScript</title>
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <style>
+   		body, .jumbotron
+   		{
+           padding : 30px;
+   		}
+   		
+   		.text-giant
+   		{
+   			font-size: 40px;
+   		}
+
+   		.btn-crazy{
+   			position:absolute;
+   			top:30px;
+   			left:40%;
+   			width:20%;
+   			transition:0.5s ease all;
+   			text-align: center;
+   		}
+   </style>
+</head>
+<body>
+
+<button type="button" class="btn-crazy btn btn-lg btn-lang btn-danger">
+Click me!
+</button>
+
+<button type="button" class="btn-crazy btn btn-lg btn-lang btn-primary">
+Click me!
+</button>
+
+<button type="button" class="btn-crazy btn btn-lg btn-lang btn-success">
+Click me!
+</button>
+
+<script>
+const crazyButtons=document.querySelectorAll('.btn-crazy');
+
+function goCrazy(){
+	//random number for left offset and top offset
+	const offsetLeft = Math.random() * (window.innerWidth - this.clientWidth);
+	const offsetTop = Math.random() * (window.innerHeight - this.clientHeight);
+
+	//apply those number to the button
+	this.style.top = offsetTop + 'px';
+	this.style.left = offsetLeft +'px';
+}
+
+crazyButtons.forEach(button => button.addEventListener('mouseenter',goCrazy));
+</script>
+</body>
+</html>
